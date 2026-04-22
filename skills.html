@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ja" data-palette="graphite">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skills — 黒子 綾 Kuroko Ryo</title>
+<link rel="stylesheet" href="shared.css?v=3">
+<style>
+  .page-hero { padding: clamp(70px, 10vw, 110px) var(--gutter) clamp(40px, 6vw, 70px); text-align: center; }
+  .page-hero h1 { margin: 14px 0 16px; }
+
+  .skill-block {
+    padding: clamp(40px, 5vw, 70px) var(--gutter);
+  }
+  .skill-block.grey { background: var(--bg-2); }
+
+  .block-head {
+    max-width: var(--maxw);
+    margin: 0 auto 30px;
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .block-head .n {
+    font-family: var(--f-mono);
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .block-head h2 {
+    margin: 0;
+    font-size: clamp(26px, 3vw, 36px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  .block-head .en {
+    margin-left: auto;
+    font-family: var(--f-ui);
+    font-size: 13px;
+    color: var(--ink-faint);
+  }
+
+  .skill-list {
+    max-width: var(--maxw);
+    margin: 0 auto;
+  }
+  .skill-row {
+    display: grid;
+    grid-template-columns: 1.1fr 60px 1.4fr;
+    gap: 20px;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .skill-row:last-child { border-bottom: 0; }
+  .skill-row .name { font-size: 17px; font-weight: 500; letter-spacing: -0.01em; }
+  .skill-row .yr {
+    font-family: var(--f-ui);
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  .skill-row .yr small { font-size: 12px; color: var(--ink-faint); font-weight: 400; margin-left: 3px; }
+  .skill-row .bar-wrap {
+    position: relative; height: 6px;
+    background: var(--rule-soft);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .skill-row .bar-fill {
+    position: absolute; left: 0; top: 0; bottom: 0;
+    background: linear-gradient(90deg, #0071e3, #5ab0ff);
+    border-radius: 999px;
+  }
+  [data-palette="silver"] .skill-row .bar-fill { background: var(--ink); }
+  [data-palette="graphite"] .skill-row .bar-fill { background: linear-gradient(90deg, #5ab0ff, #bf5af2); }
+  .skill-row .note { font-family: var(--f-ui); font-size: 12px; color: var(--ink-faint); }
+  .skill-row .bar-cell { display: flex; flex-direction: column; gap: 6px; }
+
+  @media (max-width: 640px) {
+    .skill-row { grid-template-columns: 1fr 60px; }
+    .skill-row .bar-cell { grid-column: 1 / -1; }
+  }
+
+  .nav-btm {
+    display: flex; justify-content: space-between; gap: 12px;
+    max-width: var(--maxw); margin: 60px auto; padding: 0 var(--gutter);
+    flex-wrap: wrap;
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">黒子 綾 <span class="en">Kuroko Ryo</span></div>
+    <ul>
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="career.html">Career</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <span class="eyebrow">Skills · § 02</span>
+  <h1 class="display"><span class="gradient-text">年数で見る、</span><br>経験の深さ。</h1>
+  <p class="body-lg" style="max-width:520px;margin:18px auto 0;">担当業務・OS・言語・フレームワーク・DB・その他ミドルウェアを経験年数で可視化。</p>
+</section>
+
+<section class="skill-block grey">
+  <div class="block-head"><span class="n">01</span><h2>担当業務</h2><span class="en">Responsibilities</span></div>
+  <div class="skill-list">
+    <div class="skill-row"><div class="name">要件定義</div><div class="yr">0.5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:8%"></div></div><div class="note">メンバーとしてクライアントとのやり取り経験あり</div></div></div>
+    <div class="skill-row"><div class="name">基本設計</div><div class="yr">3<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:50%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">詳細設計</div><div class="yr">3<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:50%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">実装</div><div class="yr">6<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:100%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">テスト</div><div class="yr">6<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:100%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">運用保守</div><div class="yr">3<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:50%"></div></div><div class="note"></div></div></div>
+  </div>
+</section>
+
+<section class="skill-block">
+  <div class="block-head"><span class="n">02</span><h2>OS</h2><span class="en">Operating Systems</span></div>
+  <div class="skill-list">
+    <div class="skill-row"><div class="name">Windows</div><div class="yr">6<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:100%"></div></div><div class="note">インストールから環境構築、設定、開発が可能</div></div></div>
+    <div class="skill-row"><div class="name">MacOS</div><div class="yr">5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:83%"></div></div><div class="note">インストールから環境構築、設定、開発が可能</div></div></div>
+    <div class="skill-row"><div class="name">Linux</div><div class="yr">1<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:17%"></div></div><div class="note">調べながらであれば作業可能</div></div></div>
+  </div>
+</section>
+
+<section class="skill-block grey">
+  <div class="block-head"><span class="n">03</span><h2>言語</h2><span class="en">Languages</span></div>
+  <div class="skill-list">
+    <div class="skill-row"><div class="name">Java</div><div class="yr">5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:83%"></div></div><div class="note">通常使用問題なし</div></div></div>
+    <div class="skill-row"><div class="name">shell script</div><div class="yr">3<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:50%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">HTML</div><div class="yr">2<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:33%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">CSS</div><div class="yr">2<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:33%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">JavaScript</div><div class="yr">2<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:33%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">TypeScript</div><div class="yr">2<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:33%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">PHP</div><div class="yr">1<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:17%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">C#</div><div class="yr">1<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:17%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Groovy</div><div class="yr">0.5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:8%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Python</div><div class="yr">0.5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:8%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">GraphQL</div><div class="yr">0.5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:8%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Go</div><div class="yr">0.5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:8%"></div></div><div class="note">自己研鑽</div></div></div>
+  </div>
+</section>
+
+<section class="skill-block">
+  <div class="block-head"><span class="n">04</span><h2>フレームワーク</h2><span class="en">Frameworks</span></div>
+  <div class="skill-list">
+    <div class="skill-row"><div class="name">Spring Boot</div><div class="yr">3<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:50%"></div></div><div class="note">通常使用問題なし</div></div></div>
+    <div class="skill-row"><div class="name">Vue.js</div><div class="yr">3<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:50%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Nuxt.js</div><div class="yr">2<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:33%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Swing</div><div class="yr">1.5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:25%"></div></div><div class="note">調べながらであれば作業可能</div></div></div>
+    <div class="skill-row"><div class="name">Laravel v10</div><div class="yr">1<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:17%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">React v18</div><div class="yr">1<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:17%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Stencil</div><div class="yr">1<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:17%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">ASP.NET</div><div class="yr">1<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:17%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Next.js</div><div class="yr">0.5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:8%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Flask</div><div class="yr">0.5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:8%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">LangChain</div><div class="yr">0.5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:8%"></div></div><div class="note"></div></div></div>
+  </div>
+</section>
+
+<section class="skill-block grey">
+  <div class="block-head"><span class="n">05</span><h2>データベース</h2><span class="en">Databases</span></div>
+  <div class="skill-list">
+    <div class="skill-row"><div class="name">PostgreSQL</div><div class="yr">2<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:33%"></div></div><div class="note">テーブル設計可能</div></div></div>
+    <div class="skill-row"><div class="name">MySQL</div><div class="yr">2<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:33%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">SQL Server 2008</div><div class="yr">1<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:17%"></div></div><div class="note"></div></div></div>
+  </div>
+</section>
+
+<section class="skill-block">
+  <div class="block-head"><span class="n">06</span><h2>その他</h2><span class="en">Middleware · Tools</span></div>
+  <div class="skill-list">
+    <div class="skill-row"><div class="name">Redmine</div><div class="yr">4<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:67%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Docker</div><div class="yr">3<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:50%"></div></div><div class="note">通常使用問題なし</div></div></div>
+    <div class="skill-row"><div class="name">Git</div><div class="yr">3<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:50%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Jenkins</div><div class="yr">2.5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:42%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">AWS</div><div class="yr">2<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:33%"></div></div><div class="note">調べながらであれば作業可能</div></div></div>
+    <div class="skill-row"><div class="name">Kubernetes</div><div class="yr">2<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:33%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">SVN</div><div class="yr">1<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:17%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Claude Code</div><div class="yr">1<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:17%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Confluence</div><div class="yr">1<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:17%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Backlog</div><div class="yr">1<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:17%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">GitHub Actions</div><div class="yr">0.5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:8%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">n8n</div><div class="yr">0.5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:8%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Dify</div><div class="yr">0.5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:8%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Codex</div><div class="yr">0.5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:8%"></div></div><div class="note"></div></div></div>
+    <div class="skill-row"><div class="name">Cursor</div><div class="yr">0.5<small>yr</small></div><div class="bar-cell"><div class="bar-wrap"><div class="bar-fill" style="width:8%"></div></div><div class="note"></div></div></div>
+  </div>
+</section>
+
+<nav class="nav-btm">
+  <a class="btn secondary" href="career.html">← Career</a>
+  <a class="btn" href="about.html">About →</a>
+</nav>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div>© 2026 Kuroko Ryo · Résumé</div>
+    <div><a href="https://github.com/kuroRy" target="_blank" rel="noopener">github.com/kuroRy</a></div>
+    <div>§ 02 — Skills</div>
+  </div>
+</footer>
+
+<script src="shared.js?v=3"></script>
+</body>
+</html>

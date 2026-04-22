@@ -2,7 +2,7 @@
 (function() {
   const DEFAULTS = /*EDITMODE-BEGIN*/{
     "type": "default",
-    "palette": "light",
+    "palette": "graphite",
     "display": "cards"
   }/*EDITMODE-END*/;
 

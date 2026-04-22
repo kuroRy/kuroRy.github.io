@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="ja" data-palette="graphite">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Career — 黒子 綾 Kuroko Ryo</title>
+<link rel="stylesheet" href="shared.css?v=3">
+<style>
+  .page-hero {
+    padding: clamp(70px, 10vw, 110px) var(--gutter) clamp(40px, 6vw, 70px);
+    text-align: center;
+  }
+  .page-hero h1 { margin: 14px 0 16px; }
+
+  .company {
+    padding: clamp(50px, 7vw, 90px) var(--gutter);
+    scroll-margin-top: 80px;
+  }
+  .company.grey { background: var(--bg-2); }
+  .co-head {
+    max-width: var(--maxw);
+    margin: 0 auto 40px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: end;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .co-head .period {
+    font-size: 13px;
+    color: var(--accent);
+    font-family: var(--f-ui);
+    font-weight: 500;
+    margin-bottom: 10px;
+    letter-spacing: 0.01em;
+  }
+  .co-head h2 {
+    margin: 0;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+  }
+  .co-head .meta {
+    text-align: right;
+    font-family: var(--f-ui);
+    font-size: 13px;
+    color: var(--ink-faint);
+    line-height: 1.7;
+  }
+  .co-head .meta strong { color: var(--ink); font-weight: 500; }
+  @media (max-width: 720px) { .co-head { grid-template-columns: 1fr; } .co-head .meta { text-align: left; } }
+
+  .project {
+    max-width: var(--maxw);
+    margin: 0 auto 32px;
+    padding: clamp(30px, 4vw, 42px);
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--rule-soft);
+  }
+  [data-palette="graphite"] .project { border-color: var(--rule); }
+  .company.grey .project { background: var(--surface); }
+  .project .proj-meta {
+    display: flex; gap: 10px; flex-wrap: wrap;
+    font-family: var(--f-ui); font-size: 12px;
+    margin-bottom: 14px;
+  }
+  .project h3 {
+    margin: 0 0 8px;
+    font-size: clamp(22px, 2.4vw, 28px);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+  }
+  .project .desc { color: var(--ink-soft); font-size: 15px; margin: 0 0 20px; }
+
+  .project h4 {
+    font-family: var(--f-ui);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin: 26px 0 10px;
+  }
+  .sub-head {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 18px 0 8px;
+    letter-spacing: -0.005em;
+  }
+  .project ul {
+    margin: 0 0 8px;
+    padding: 0;
+    list-style: none;
+  }
+  .project ul li {
+    position: relative;
+    padding-left: 18px;
+    margin: 7px 0;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  .project ul li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 10px;
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .project ul ul { margin: 4px 0 4px; }
+  .project ul ul li { font-size: 14px; }
+  .project ul ul li::before { background: var(--ink-faint); width: 4px; height: 4px; top: 11px; }
+
+  .stack-grid {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 12px 20px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule-soft);
+    font-family: var(--f-ui);
+    font-size: 13px;
+  }
+  .stack-grid dt { color: var(--ink-faint); font-size: 11px; letter-spacing: 0.02em; text-transform: uppercase; font-weight: 500; padding-top: 2px; }
+  .stack-grid dd { margin: 0; color: var(--ink); line-height: 1.55; }
+  @media (max-width: 600px) { .stack-grid { grid-template-columns: 1fr; gap: 4px 0; } .stack-grid dd { margin-bottom: 10px; } }
+
+  .org-line {
+    display: flex; gap: 20px; flex-wrap: wrap;
+    margin-top: 16px;
+    font-family: var(--f-ui); font-size: 12px; color: var(--ink-faint);
+  }
+  .org-line strong { color: var(--ink); font-weight: 500; }
+
+  .nav-btm {
+    display: flex; justify-content: space-between; gap: 12px;
+    max-width: var(--maxw); margin: 60px auto; padding: 0 var(--gutter);
+    flex-wrap: wrap;
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">黒子 綾 <span class="en">Kuroko Ryo</span></div>
+    <ul>
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="career.html">Career</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <span class="eyebrow">Career · § 01</span>
+  <h1 class="display"><span class="gradient-text">5社・8年の、</span><br>すべての経歴。</h1>
+  <p class="body-lg" style="max-width:520px;margin:18px auto 0;">2018年からの全プロジェクトを、開発環境・役割・成果とともに掲載しています。</p>
+</section>
+
+<!-- GRAFFER -->
+<section class="company grey" id="graffer">
+  <div class="co-head">
+    <div>
+      <div class="period">2026.01 — 現在 · Ongoing</div>
+      <h2>株式会社グラファー</h2>
+    </div>
+    <div class="meta">
+      <div>AI Product Development</div>
+      <div><strong>Member</strong> · Team of 5</div>
+      <div>Agile</div>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="proj-meta">
+      <span class="pill accent">AIプロダクト</span>
+      <span class="pill">フルスタック</span>
+      <span class="pill">DDD</span>
+    </div>
+    <h3>AIプロダクト「Graffer AI Studio」の機能開発・保守運用</h3>
+    <p class="desc">開発手法：アジャイル / 担当フェーズ：詳細設計・実装・テスト・保守運用</p>
+
+    <h4>機能開発</h4>
+    <div class="sub-head">利用状況分析基盤の新規開発</div>
+    <ul>
+      <li>テナント管理者向けに利用状況を可視化する基盤をフルスタックで担当（ドメイン設計、集計バッチ、REST API、分散ストレージ、Kubernetesジョブ）</li>
+      <li>初期実装を段階的にマージできるよう複数PRに分割し、レビュー負荷と事故リスクを低減</li>
+      <li>既存データとの後方互換性を確保し、過去データの再生成コストを回避</li>
+    </ul>
+    <div class="sub-head">プロンプト下書き保存機能の新規開発</div>
+    <ul>
+      <li>入力中のプロンプトが誤操作で失われる問題を解消し、作業継続性を改善</li>
+      <li>データ層からUI、定期クリーンアップのバッチまでフルスタックで担当</li>
+    </ul>
+    <div class="sub-head">生成AI機能の残り利用回数表示機能の追加</div>
+    <ul>
+      <li>利用者が上限到達前に状況を把握できるUIに改善</li>
+      <li>散在していた上限値の定数集約をリファクタリングで先行させた上で、状況取得APIと表示コンポーネントを実装</li>
+    </ul>
+
+    <h4>AI基盤・モデル運用</h4>
+    <ul>
+      <li>LLMモデルの追加・廃止対応
+        <ul><li>廃止時は事前告知バナーと切り替え処理を分けて段階的にリリースし、利用者の混乱を避けた</li></ul>
+      </li>
+      <li>モデルスコア設定ファイルの自動更新CIを構築し、新モデル追加時の手動メンテナンスコストを削減</li>
+      <li>API上限超過時に古い履歴画像を自動除外する処理の実装</li>
+    </ul>
+
+    <h4>運用・UX改善</h4>
+    <ul>
+      <li>音声文字起こし操作フローの自動化（録音停止→アップロード→文字起こしを一括化）</li>
+      <li>ツールOFF操作と連動した進行中アップロードの中断処理を実装</li>
+      <li>エクスポート失敗時の原因を画面表示するように変更し、問い合わせ一次調査の負荷を軽減</li>
+      <li>チャット・ワークスペース周りのUI不具合修正複数</li>
+      <li>入力文字数制限の緩和（ビジネスサイドの要望対応）</li>
+      <li>未使用モジュールの整理によるローカル構築手順の簡素化</li>
+    </ul>
+
+    <h4>開発環境・チーム貢献</h4>
+    <ul>
+      <li>AIエージェント（Claude Code / Cursor / Codex）向け開発基盤の整備
+        <ul><li>定型操作のスキル化、スキル配置の統一、コーディング規約の集約をチーム全体で共有</li></ul>
+      </li>
+      <li>社内共有リポジトリへの改善PRによる開発体験向上</li>
+      <li>n8nを活用した問い合わせ一次調査自動化の提案</li>
+      <li>外部企業向けDify / v0ベースの研修資料作成</li>
+    </ul>
+
+    <dl class="stack-grid">
+      <dt>OS</dt><dd>MacOS</dd>
+      <dt>言語</dt><dd>TypeScript, Python, GraphQL, SQL</dd>
+      <dt>Framework</dt><dd>Next.js, React, Flask, LangChain, Pydantic</dd>
+      <dt>DB / Storage</dt><dd>PostgreSQL, Amazon S3, Parquet, DuckDB</dd>
+      <dt>設計</dt><dd>ドメイン駆動設計 (DDD), 依存性注入 (DI), Stacked PR</dd>
+      <dt>Infra / Ops</dt><dd>Kubernetes (CronJob / Adhoc Job), Docker, GitHub Actions</dd>
+      <dt>その他</dt><dd>Git, GitHub, n8n, Dify, Claude Code, Codex, Cursor</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- TECOTEC -->
+<section class="company" id="tecotec">
+  <div class="co-head">
+    <div>
+      <div class="period">2023.09 — 2025.12 · 2 years 4 months</div>
+      <h2>株式会社テコテック</h2>
+    </div>
+    <div class="meta">
+      <div>販売管理システム</div>
+      <div><strong>Member → Lead Engineer</strong> · Team 4 of 50</div>
+      <div>Waterfall · Agile</div>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="proj-meta">
+      <span class="pill accent">Lead Engineer</span>
+      <span class="pill">Laravel v8→v12</span>
+    </div>
+    <h3>販売管理システムの追加開発・保守運用</h3>
+    <p class="desc">担当フェーズ：要件定義・基本設計・詳細設計・実装・運用保守</p>
+
+    <h4>担当業務</h4>
+    <ul>
+      <li>追加機能の見積もり・開発
+        <ul>
+          <li>Triplaと連携しホテル宿泊者限定販売機能の開発</li>
+          <li>部分キャンセル、ユーザーキャンセル機能の開発</li>
+          <li>物理年間パスポートのオンライン移行機能の開発</li>
+          <li>脆弱性試験の実施・修正</li>
+          <li>一括キャンセル予約機能の要件定義・見積もり</li>
+        </ul>
+      </li>
+      <li>Laravelのバージョンアップ（8→10 / 10→12）提案・見積もり・実装・テスト</li>
+      <li>local環境構築の自動化</li>
+      <li>単体テストの導入・自動化</li>
+      <li>コード整形、静的解析ツールの提案・導入</li>
+      <li>iOS / Androidアプリ連携用API開発（会員情報取得、購入情報取得）</li>
+      <li>障害対応</li>
+      <li>決済APIの結合テスト・リファクタリング</li>
+      <li>エンジニアの工数管理</li>
+      <li>生成AIガイドライン作成支援（社内で積極的にAIについて発信、PMOの壁打ち担当）</li>
+      <li>顧客折衝（技術担当）</li>
+      <li>wikiの作成・整備・推進</li>
+    </ul>
+
+    <dl class="stack-grid">
+      <dt>OS</dt><dd>MacOS</dd>
+      <dt>言語</dt><dd>JavaScript, PHP, shell script</dd>
+      <dt>Framework</dt><dd>Vue.js, Laravel v8 / v10 / v11 / v12</dd>
+      <dt>DB</dt><dd>MySQL</dd>
+      <dt>その他</dt><dd>AWS (EC2, CloudWatch, S3, CodePipeline), Docker, Git, GitHub Actions, Backlog</dd>
+    </dl>
+    <div class="org-line">
+      <div>Team <strong>4名</strong></div>
+      <div>全体 <strong>50名</strong></div>
+      <div>Role <strong>メンバー / リードエンジニア (2023.12〜)</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- MONOCLAIR -->
+<section class="company grey" id="monoclair">
+  <div class="co-head">
+    <div>
+      <div class="period">2020.10 — 2023.08 · 2 years 11 months</div>
+      <h2>株式会社モノクレア</h2>
+    </div>
+    <div class="meta">
+      <div>Payment · Inventory · E-commerce</div>
+      <div><strong>Member</strong> · 3 projects</div>
+      <div>Agile · Waterfall</div>
+    </div>
+  </div>
+
+  <!-- P1 -->
+  <div class="project">
+    <div class="proj-meta">
+      <span class="pill">Project 01</span>
+      <span class="pill">9 months</span>
+      <span class="pill accent">事前決済</span>
+    </div>
+    <h3>飲食店向け事前決済サービスの新規開発</h3>
+    <p class="desc">2022.11 — 2023.08 / 顧客折衝・要件定義・基本設計・詳細設計・実装・運用保守</p>
+
+    <h4>担当業務</h4>
+    <ul>
+      <li>二段階認証機能の詳細設計・実装</li>
+      <li>EKSのバックアップ・リストア方法検討・実装</li>
+      <li>E2Eテストの導入・自動化</li>
+      <li>E2E dryrun機能の詳細設計・実装</li>
+      <li>障害対応</li>
+      <li>決済APIの結合テスト・リファクタリング</li>
+      <li>結合テストの自動化</li>
+    </ul>
+    <dl class="stack-grid">
+      <dt>言語</dt><dd>JavaScript, TypeScript, Java, shell script</dd>
+      <dt>Framework</dt><dd>Vue.js, Nuxt.js, Spring Boot</dd>
+      <dt>DB</dt><dd>PostgreSQL</dd>
+      <dt>その他</dt><dd>AWS, Docker, Kubernetes, Git, Jenkins, Redmine</dd>
+    </dl>
+    <div class="org-line">
+      <div>Team <strong>6名</strong></div><div>全体 <strong>17名</strong></div><div>Role <strong>メンバー</strong></div>
+    </div>
+  </div>
+
+  <!-- P2 -->
+  <div class="project">
+    <div class="proj-meta">
+      <span class="pill">Project 02</span>
+      <span class="pill">1y 4m</span>
+      <span class="pill accent">在庫管理</span>
+    </div>
+    <h3>アパレル系企業向け在庫管理Webアプリケーションのアーキテクチャ刷新</h3>
+    <p class="desc">2021.07 — 2022.10 / 開発手法：ウォーターフォール / 顧客折衝〜運用保守</p>
+
+    <h4>担当業務</h4>
+    <ul>
+      <li>Frontend独自フレームワークで使用する数値演算ライブラリの選定・提案</li>
+      <li>Java 17導入検討・提案</li>
+      <li>ビルド・デプロイ環境構築</li>
+      <li>WebベーススプレッドシートのFilter機能 実装・テスト</li>
+      <li>ダッシュボード画面の詳細設計・実装・単体テスト</li>
+      <li>お知らせアップロード画面の詳細設計・実装・単体テスト</li>
+      <li>認可APIに基づいて画面部品の表示/非表示を制御する共通ロジックの詳細設計・実装・結合テスト</li>
+      <li>ログ基盤詳細設計・実装・結合テスト</li>
+      <li>障害対応</li>
+    </ul>
+    <dl class="stack-grid">
+      <dt>OS</dt><dd>Windows</dd>
+      <dt>言語</dt><dd>JavaScript, TypeScript, Java, Groovy, shell script</dd>
+      <dt>Framework</dt><dd>React v18, Stencil, Spring Boot</dd>
+      <dt>DB</dt><dd>PostgreSQL</dd>
+      <dt>その他</dt><dd>Docker, Git, Jenkins, Redmine</dd>
+    </dl>
+    <div class="org-line">
+      <div>Team <strong>3名</strong></div><div>全体 <strong>100名</strong></div><div>Role <strong>メンバー</strong></div>
+    </div>
+  </div>
+
+  <!-- P3 -->
+  <div class="project">
+    <div class="proj-meta">
+      <span class="pill">Project 03</span>
+      <span class="pill">9 months</span>
+      <span class="pill accent">事前決済</span>
+    </div>
+    <h3>イベント物販・テイクアウト向け事前決済サービスの新規開発</h3>
+    <p class="desc">2020.10 — 2021.06 / 開発手法：アジャイル / 顧客折衝〜運用保守</p>
+
+    <h4>担当業務</h4>
+    <ul>
+      <li>Frontendユニットテストの導入</li>
+      <li>障害対応</li>
+      <li>EKS上に検証環境構築、構築用のIaCを実装</li>
+      <li>決済モジュールを使用してSoftBank決済APIの詳細設計・実装</li>
+      <li>ビルド・デプロイ環境構築</li>
+      <li>購入確認画面APIの詳細設計・実装・テスト</li>
+    </ul>
+    <dl class="stack-grid">
+      <dt>言語</dt><dd>JavaScript, TypeScript, Java, shell script</dd>
+      <dt>Framework</dt><dd>Vue.js, Nuxt.js, Spring Boot</dd>
+      <dt>DB</dt><dd>PostgreSQL</dd>
+      <dt>その他</dt><dd>AWS, Docker, Kubernetes, Git, Jenkins, Redmine</dd>
+    </dl>
+    <div class="org-line">
+      <div>Team <strong>4名</strong></div><div>全体 <strong>15名</strong></div><div>Role <strong>メンバー</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- JAPANIUS -->
+<section class="company" id="japanius">
+  <div class="co-head">
+    <div>
+      <div class="period">2019.04 — 2020.09 · 1 year 6 months</div>
+      <h2>ジャパニアス株式会社</h2>
+    </div>
+    <div class="meta">
+      <div>Industrial Systems</div>
+      <div><strong>Member</strong> · Team 10 of 50</div>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="proj-meta"><span class="pill accent">液晶露光装置</span><span class="pill">Java / Swing</span></div>
+    <h3>液晶露光装置システムの追加機能開発・保守</h3>
+    <p class="desc">顧客折衝・要件定義・基本設計・詳細設計・実装・運用保守</p>
+    <h4>担当業務</h4>
+    <ul>
+      <li>障害対応</li>
+      <li>テストサーバーの構築</li>
+      <li>追加機能の詳細設計・開発</li>
+    </ul>
+    <dl class="stack-grid">
+      <dt>OS</dt><dd>Windows, Linux</dd>
+      <dt>言語</dt><dd>Java, shell script</dd>
+      <dt>Framework</dt><dd>Swing</dd>
+      <dt>その他</dt><dd>SVN</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- SOFTCDC -->
+<section class="company grey" id="softcdc">
+  <div class="co-head">
+    <div>
+      <div class="period">2018.04 — 2019.03 · 1 year</div>
+      <h2>株式会社ソフトシーデーシー</h2>
+    </div>
+    <div class="meta">
+      <div>Tax Withholding System</div>
+      <div><strong>Member</strong> · Team 10 of 10</div>
+      <div>Waterfall</div>
+    </div>
+  </div>
+
+  <div class="project">
+    <div class="proj-meta"><span class="pill accent">源泉徴収システム</span><span class="pill">C# / ASP.NET</span></div>
+    <h3>源泉徴収システムの再構築</h3>
+    <p class="desc">2018.06 — 2019.03 / WindowsフォームアプリからWebアプリケーションへ再構築 / 基本設計・詳細設計・実装・運用保守</p>
+    <h4>担当業務</h4>
+    <ul>
+      <li>個人情報・支払い一覧等をExcel出力する機能の詳細設計・実装</li>
+      <li>障害対応</li>
+      <li>テスト項目書の作成</li>
+    </ul>
+    <dl class="stack-grid">
+      <dt>OS</dt><dd>Windows</dd>
+      <dt>言語</dt><dd>C#</dd>
+      <dt>Framework</dt><dd>ASP.NET</dd>
+      <dt>DB</dt><dd>SQL Server 2008</dd>
+      <dt>その他</dt><dd>SVN</dd>
+    </dl>
+  </div>
+</section>
+
+<nav class="nav-btm">
+  <a class="btn secondary" href="index.html">← Overview</a>
+  <a class="btn" href="skills.html">Skills →</a>
+</nav>
+
+</main>
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div>© 2026 Kuroko Ryo · Résumé</div>
+    <div><a href="https://github.com/kuroRy" target="_blank" rel="noopener">github.com/kuroRy</a></div>
+    <div>§ 01 — Career</div>
+  </div>
+</footer>
+
+<script src="shared.js?v=3"></script>
+</body>
+</html>
